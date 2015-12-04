@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/millar_paul_sd1_project1">
+  <Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" 
+            maxActive="100" maxIdle="30" maxWait="10000" 
+            name="jdbc/millar_paul_sd1_project1" password="apollo013" type="javax.sql.DataSource" 
+            url="jdbc:mysql://localhost:3306/renewenergy" username="root"/>
+</Context>

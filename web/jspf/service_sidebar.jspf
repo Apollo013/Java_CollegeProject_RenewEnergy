@@ -1,0 +1,57 @@
+<%@page import="Exceptions.DaoException"%>
+<%@page import="DataAccess.Concrete.ServiceDao"%>
+<%@page import="DataAccess.Abstract.IServiceDao"%>
+
+<div id="main_sidebar" class="floatleft content_container_w200 margin_right ">
+    
+    <div id="sidebar" class="floatleft shadow content_container content_container_w200 margin_right ">
+        
+        <div class="content_container_header">
+            <span id="service_span">
+                Solutions
+            </span>            
+        </div>
+        
+        <div class="sidebar_menu">
+            <c:choose>
+                <c:when test="${serviceSidebarList != null}">
+                    <c:forEach var="service" items="${serviceSidebarList}" >
+                        <a href="${initParam.servicesPage}&key=${service.id}" class="sidebar_image_link">
+                            <img alt="${service.getListItemImageFullPath()}" src="${service.getListItemImageFullPath()}" />
+                            <span style="display:block;">${service.name}</span>
+                        </a>                            
+                    </c:forEach>                         
+                </c:when>
+                <c:otherwise>
+                    <c:set var="errorMessage" value="ERROR: Services data is not available." scope="session"/>
+                    <c:redirect url="../messages/error.jsp" />
+                </c:otherwise>                        
+            </c:choose>
+        </div>
+    </div>  
+                        
+    <div id="sidebar" class="shadow content_container content_container_w200 margin_right ">
+        
+        <div class="content_container_header">
+            <span id="product_span">
+                Downloads
+            </span>
+        </div>  
+        <div>
+            <a  href="${initParam.mediaPath}seai_guide.pdf">
+                <img src="${initParam.generalImagesPath}pdf.jpg" alt="seai_guide brochure" class="info_image"/>
+                <span class="info_text">SEI Guide To Renewable Energy In The Home</span>
+            </a>					
+        </div>
+        <div>
+            <a  href="${initParam.mediaPath}DEAP_Manual.pdf">
+                <img src="${initParam.generalImagesPath}pdf.jpg" alt="DEAP_Manual brochure" class="info_image"/>
+                <span class="info_text">Energy Assessment Procedure Guide</span>
+            </a>					
+        </div> 
+        <div>&nbsp;</div>                
+   </div> 
+                
+    <%@include file="contactus_sidepanel.jspf"%>  
+    
+</div>

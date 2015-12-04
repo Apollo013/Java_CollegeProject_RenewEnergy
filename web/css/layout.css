@@ -1,0 +1,271 @@
+/* 
+    Created on      : 30-Jan-2014, 18:44:14
+    Author          : Paul Millar <D00152098>
+    Original Code   : www.getskeleton.com
+*/
+
+.container {
+    position: relative;
+    width: 960px;
+    margin: 0 auto;
+    padding: 0;
+   /* background-color: blue;  transparent; */
+}
+
+.container .column {
+    float: left;
+    display: inline;
+    margin: 5px 10px;       /* CHANGES TO ZERO IN MEDIA QUERIES */
+        
+}
+
+.column.alpha{ 
+    margin-left: 0; 
+}
+
+.column.omega{ 
+    margin-right: 0; 
+}
+
+.container .full-width.column{
+    width: 960px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.container .one-half.column{
+    width: 460px;
+}
+
+.container .one-third.column { 
+    width: 300px; 
+}
+
+.container .two-thirds.column { 
+    width: 620px; 
+}
+
+
+/*==============================================================*/
+/* Tablet (Portrait) 					
+/*==============================================================*/
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+    .container { 
+        width: 768px; 
+    }
+    
+    .container .one-half.column{
+        width: 364px;
+    }
+    
+    #billboard {display: none;}
+
+    #main_navigation_list {
+        margin-left:0px; 
+        margin-top:5px; 
+        padding:0px; 
+        height: auto;            
+        width:100%;
+    }
+
+    #main_navigation_list li {
+        background-image:url(../images/general/nav_button_normal_1px.jpg); 
+        background-repeat: repeat-x; 
+        width:191px; 
+ 
+    }   
+}
+
+
+/*==============================================================*/
+/* Mobile (Portrait) 					
+/*==============================================================*/
+@media only screen and (max-width: 767px) {
+
+    .column {
+        margin: 0 !important;
+    }
+    
+    .container { 
+        width: 300px; 
+    }
+    
+    .container .one-half.column{
+        width: 300px;
+    }
+    
+    #billboard {display: none;}   
+    
+    #main_navigation_list {
+        margin-left:0px; 
+        margin-top:5px; 
+        padding:0px; 
+        height: auto;
+            
+        width:100%;
+    }
+
+    #main_navigation_list li {
+        background-image:url(../images/general/nav_button_normal_1px.jpg); 
+        background-repeat: repeat-x; 
+
+        width:100%; 
+        float:left; 
+
+    }   
+    
+    #main_navigation_list li:hover 	{
+        background-image:url(../images/general/nav_button_selected_1px.jpg); 
+        background-repeat: repeat-x;
+    }    
+}
+
+
+/*==============================================================*/
+/* Mobile (Landscape) 					
+/*==============================================================*/
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    
+    .column {
+        margin: 0 !important;
+    }
+    
+    .container { 
+        width: 420px; 
+    }
+    
+    .container .one-half.column{
+        width: 420px;
+    }
+ 
+    #billboard {display: none;} 
+    
+    #main_navigation_list {
+        margin-left:0px; 
+        margin-top:5px; 
+        padding:0px; 
+        height: auto;
+            
+        width:100%;
+    }
+
+    #main_navigation_list li {
+        background-image:url(../images/general/nav_button_normal_1px.jpg); 
+        background-repeat: repeat-x; 
+        width:100%; 
+        float:left; 
+    }    
+    
+    #main_navigation_list li:hover 	{
+        background-image:url(../images/general/nav_button_selected_1px.jpg); 
+        background-repeat: repeat-x;
+    }      
+}
+
+/*==============================================================*/
+/* LANDSCAPE SMART PHONE (SMALL)				
+/*==============================================================*/
+@media  only screen and (min-width: 321px) and (max-width: 480px) {
+    
+    .column {
+        margin: 0 !important;
+    }
+    
+    .container { 
+        width: 320px; 
+    }
+    
+    .container .one-half.column{
+        width: 320px;
+    }
+    
+    #billboard {display: none;}
+    
+/*==============================================================*/
+/* MAIN NAVIGATION						*/
+/*==============================================================*/
+
+    #main_navigation_list {
+        margin-left:0px; 
+        margin-top:5px;         
+        height: auto;
+    }
+
+    #main_navigation_list li {
+        background-image:url(../images/general/nav_button_normal_1px.jpg); 
+        background-repeat: repeat-x;         
+        width:100%; 
+    }
+
+
+    #main_navigation_list li:hover 	{
+        background-image:url(../images/general/nav_button_selected_1px.jpg); 
+        background-repeat: repeat-x;
+    }      
+}
+
+/*==============================================================*/
+/* PORTRAIT SMART PHONE (SMALL)				
+/*==============================================================*/
+@media  only screen and (max-width: 320px) {
+    
+    .column {
+        margin: 0 !important;
+    }
+    
+    .container { 
+        width: 320px; 
+    }
+    
+    .container .one-half.column{
+        width: 320px;
+    }
+    
+    #billboard {display: none;}
+    
+/*==============================================================*/
+/* MAIN NAVIGATION						*/
+/*==============================================================*/
+
+    #main_navigation_list {
+        margin-left:0px; 
+        margin-top:5px;         
+        height: auto;
+    }
+
+    #main_navigation_list li {
+        background-image:url(../images/general/nav_button_normal_1px.jpg); 
+        background-repeat: repeat-x;         
+        width:100%; 
+    }
+
+    #main_navigation_list li:hover 	{
+        background-image:url(../images/general/nav_button_selected_1px.jpg); 
+        background-repeat: repeat-x;
+    }  
+    
+}
+
+/*==============================================================*/
+/* CLEARING 					
+/*==============================================================*/
+.container:after { 
+    content: "\0020"; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden; 
+}
+ 
+
+/*==============================================================*/
+/* TRANSITIONS
+/* http://elliotjaystocks.com/blog/css-transitions-media-queries/
+/*==============================================================*/
+.container, .column{
+    transition:all .2s linear; 
+    -o-transition:all .2s linear; 
+    -moz-transition:all .2s linear; 
+    -webkit-transition:all .2s linear;  
+}

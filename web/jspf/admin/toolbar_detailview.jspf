@@ -1,0 +1,33 @@
+<%-- Used only on detail/update forms. --%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
+   
+<div class="admin_toolbar blue_gradient">
+
+    <div class="admin_detail_button_wrapper">   
+        <c:choose>
+            <c:when test="${command == initParam.editCommand || command == initParam.createCommand}">
+                <input type="submit" value="Save" class="button orange_button toolbar_button" tabindex="15" onclick="submitForm()"/>  
+            </c:when>
+            <c:otherwise>
+                <input type="submit" value="Delete" class="button orange_button toolbar_button" tabindex="16" onclick="submitForm()"/>                   
+            </c:otherwise>
+        </c:choose>        
+        <a href="javascript:history.back()" class="button orange_button toolbar_button" tabindex="17" >Back</a>                    
+    </div>
+                
+    <c:choose>
+        <c:when test="${command == initParam.createCommand}">
+            <h3 class="floatright admin_page_header">Create A New ${pageHeader}</h3> 
+            <c:set var="command" value="${initParam.insertCommand}"/>            
+        </c:when>
+        <c:when test="${command == initParam.editCommand}">
+            <h3 class="floatright admin_page_header">Edit ${pageHeader}</h3> 
+            <c:set var="command" value="${initParam.updateCommand}"/>            
+        </c:when>            
+        <c:otherwise>
+            <h3 class="floatright admin_page_header">Delete ${pageHeader}</h3>    
+            <c:set var="command" value="${initParam.deleteCommand}"/>            
+        </c:otherwise>
+    </c:choose>    
+          
+</div>

@@ -1,0 +1,13 @@
+<%-- 
+    Toolbar used only on when viewing lists
+--%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+
+<div class="admin_toolbar blue_gradient">
+    <a href="${currentPage}?cmd=${initParam.createCommand}" class="button orange_button toolbar_button">
+        <span>New ${pageHeader}</span>
+    </a>
+    <h3 class="floatright admin_page_header" style="color: #FFFFAA; margin: 10px;">${pageHeader} List</h3>   
+</div>
+ 

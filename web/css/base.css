@@ -1,0 +1,146 @@
+/* 
+    Created on : 30-Jan-2014, 17:37:26
+    Author     : Paul Millar <D00152098>
+*/
+
+/*==============================================================*/
+/* BASE 							*/
+/*==============================================================*/
+body{
+    font-size:12px;
+    font-family: Sans-Serif;
+    /*font: 1em/1.5em , sans-serif, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial;     Font Size: 16px ; Line Height: 24px - source: http://alistapart.com/article/howtosizetextincss*/
+    -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;    
+    background:url('../images/general/body_background.jpg'); 
+    background-repeat:repeat;     
+}
+
+.floatleft      {float:left;}
+.floatright     {float:right;}    
+.clearboth      {clear: both;}
+.clearright     {clear: right;}
+/*==============================================================*/
+/* COLOURS 							*/
+/*==============================================================*/
+.white          {color: #ffffff;}
+
+
+/*==============================================================*/
+/* IMAGES 							*/
+/*==============================================================*/
+img { 
+    max-width: 100%; 
+    display: block;
+    border: none;
+}
+
+/*==============================================================*/
+/* ANCHORS 							*/
+/*==============================================================*/
+a,a:visited {
+    color:#1c2e74; 
+    text-decoration:none; 
+    border:none; 
+    outline:none;
+}
+
+/*==============================================================*/
+/* HEADER 							*/
+/*==============================================================*/
+#main_header_wrapper    {width:100%;}
+#header_title_container {background :url('../images/general/renew_logo.png'); background-repeat: no-repeat; height:100px; width:100%; margin-top:10px; }
+
+#language{width:100px; background-color: transparent; border: none; color: yellow;}
+#language  option{background-color:#3960a6; border: none;}
+#language  option:focus{background-color:#00ff33}
+
+/*==============================================================*/
+/* EFFECTS 							*/
+/*==============================================================*/
+.radius     {-webkit-border-radius: 4px; border-radius: 4px; overflow: hidden;} /*overflow: hidden;*/
+.shadow     {-webkit-box-shadow: 0 8px 6px -6px black; box-shadow: 0 8px 6px -6px black;}
+.bordered   {border: 1px solid #a7abb9;}
+strong      {color:#31448b}
+
+/*==============================================================*/
+/* TYPOGRAPHY 							*/
+/*==============================================================*/
+
+
+/*==============================================================*/
+/* NAVIGATION 							*/
+/*==============================================================*/
+.navigation_bar li{
+    float:left; 
+    display:inline;
+}
+
+.navigation_bar li a{
+    display:block; 
+    height:100%; 
+    width:100%; 
+    text-decoration:none;
+}
+
+.navigation_bar li a span{
+    display:block; 
+    color: white; 
+    font-weight: bold; 
+    text-align: center; 
+    line-height: 3.5em; 
+}
+
+/*==============================================================*/
+/* MAIN NAVIGATION						*/
+/*==============================================================*/
+#main_navigation_list {
+    margin-left:0px; 
+    margin-top:5px; 
+    padding:0px; 
+    height:40px; 
+    width:100%;
+}
+
+#main_navigation_list li {
+    background-image:url(../images/general/nav_button_normal.png); 
+    background-repeat: no-repeat; 
+    height:40px; 
+    width:120px; 
+    float:left; 
+    display:inline; 
+}
+
+#main_navigation_list li:hover 	{
+    background-image:url(../images/general/nav_button_selected.png); 
+    background-repeat: no-repeat;
+}
+
+/*==============================================================*/
+/* BILLBOARD							*/
+/*==============================================================*/
+#billboard{ background:url('../images/general/billboard_background.jpg'); 
+            background-repeat: no-repeat; 
+            width:100%; 
+            margin-bottom:15px;
+}
+
+#billboard #slider_Content          {width: 460px; position: relative; 	height: 260px; 	top: 0;  padding: 0; overflow: hidden; 	list-style-type: none; 	float: right;margin: 0;}
+#billboard #slider_Content li       {display: none; width:460px; height:260px; }
+#billboard #slider_Content li div   {background-color: #000;	width: 460px; height: 0px; z-index: 99;	position: absolute; float: left; opacity: 0.8;	margin: 0px; -webkit-border-top-left-radius: 8px;border-top-left-radius: 8px;}
+	
+#billboard #slider_Content li div span                  {padding-left: 10px; display: block; line-height: 22px; }	
+#billboard #slider_Content li div span.slidertopspan    {font-weight: bold; font-size: 20px; color: white;  padding-top: 8px;}
+#billboard #slider_Content li div span.sliderbottomspan {font-size: 11px; color: #00ff33; font-family: sans-serif !important; font-weight: 600;}
+
+
+/*==============================================================*/
+/* TRANSITIONS
+/* http://elliotjaystocks.com/blog/css-transitions-media-queries/
+/*==============================================================*/
+body, img{
+    transition:all .2s linear; 
+    -o-transition:all .2s linear; 
+    -moz-transition:all .2s linear; 
+    -webkit-transition:all .2s linear;    
+}

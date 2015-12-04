@@ -1,0 +1,69 @@
+            </div>            
+            <div id="main_footer_wrapper" class="radius shadow">
+                <div class="footer_container" id="footer_Gallery_container">
+                    <a target="_top" href="${initParam.galleryPage}" class="footer_header_link" id="footer_Gallery_header_link">
+                        <span class="footer_link_span" id="footer_Gallery_link_span">Gallery</span>
+                    </a><span class="footer_content" id="footer_Gallery_content">
+                    <a target="_top" href="${initParam.galleryPage}" class="footer_image_link" id="footer_Gallery_image_link">
+                        <img alt="Gallery" src="${initParam.generalImagesPath}gallery_link.png" class="footer_image radius" id="footer_Gallery_image_">
+                    </a></span>
+                </div>
+                <div class="footer_container" id="footer_Contact_container">
+                    <a target="_top" href="${initParam.contactusPage}" class="footer_header_link" id="footer_Contact_header_link">
+                        <span class="footer_link_span" id="footer_Contact_link_span">Contact</span>
+                    </a>
+                    <span class="footer_content" id="footer_Contact_content">
+                        <table id="contact_footer_table">
+                            <tr>
+                                <th>
+                                    <span class="contact_span">Phone</span>
+                                    <span class="contact_span small_text">(Rep. of Ireland)</span>
+                                </th>
+                                <td>
+                                    <span class="contact_span contact_data">+353 42-9356789</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <span class="contact_span">Phone</span>
+                                    <span class="contact_span small_text">(N. Ireland)</span>
+                                </th>
+                                <td>
+                                    <span class="contact_span contact_data">+048 30-5556789</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <span class="contact_span">Mobile</span>
+                                </th>
+                                <td>
+                                    <span class="contact_span contact_data">+353 86-6889456</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <span class="contact_span">Fax</span>
+                                </th>
+                                <td>
+                                    <span class="contact_span contact_data">+353 42-9356788</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <span class="contact_span">Email</span>
+                                </th>
+                                <td>
+                                    <span class="contact_span contact_data">info@renewireland.ie</span>
+                                </td>
+                            </tr>
+                        </table>            
+                    </span>
+                </div>
+                <div class="footer_container" id="footer_facebook_container">
+                    <a target="_blank" href="https://www.facebook.com/groups/168884449977512/" class="floatright" id="footer_facebook_image_link">
+                        <img alt="facebook" src="${initParam.generalImagesPath}facebooklogo.png" class="footer_image radius" id="footer_facebook_image_">
+                    </a>
+                </div>
+            </div>        </div>
+    </body>
+</html>

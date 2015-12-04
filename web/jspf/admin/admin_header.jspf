@@ -1,0 +1,44 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+
+<!DOCTYPE html>
+<html>
+
+<%-- User must be logged in and an administrator --%>
+<c:choose>
+    <c:when test="${loggedSessionId == null || userType != 1}">
+        <c:redirect url="${initParam.errorPath}">
+            <c:set var="errorTitle" value="Authorisation Error" scope="session"/>               
+            <c:set var="errorMessage" value="Sorry, but you are not authorised to view this page" scope="session"/>                
+        </c:redirect>        
+    </c:when>
+</c:choose>
+
+<%-- Split the url so i can access the last portion --%>
+<c:set var="splitURI"       value="${fn:split(requestScope['javax.servlet.forward.servlet_path'], '/')}"/>
+<%--Get the current page, i.e. category, product, service, user, etc ...--%>
+<c:set var="currentPage"    value="${splitURI[fn:length(splitURI)-1]}"/>
+<%--Capitalise the current page title - used for displaying what list we are viewing --%>
+<c:set var="pageHeader"     value="${fn:toUpperCase(fn:substring(currentPage, 0, 1))}${fn:toLowerCase(fn:substring(currentPage, 1,fn:length(currentPage)))}"/>
+<%-- Get the command, i.e. searchall, searchkey, etc ... --%>               
+<c:set var="command"        value="${param.cmd}"/>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Administration</title>
+        		        
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>       
+        <script src="${initParam.jsPath}validation.js" type="text/javascript"></script>
+
+        <link href="${initParam.generalImagesPath}favicon.ico" rel="shortcut icon" type="image/x-icon" >
+        <link href="${initParam.cssPath}forms.css" type="text/css" rel="stylesheet"/>            
+    </head>
+
+    <body class="blue_gradient">
+            
+        <div class="admin_header">
+            <h1>Renew Energy Group - Administration</h1>            
+        </div>
+              

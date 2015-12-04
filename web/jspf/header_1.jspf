@@ -1,0 +1,147 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page import="java.util.*" %>
+
+<c:set var="language" 
+       value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}"
+       scope="session" />
+
+<fmt:setLocale value="${language}" />
+<fmt:setBundle basename="i18n.locale" />
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <title>The Home of Renewable Energy</title>
+        		        
+        <meta name="Author" content="Paul Millar" />
+     
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>       
+        
+        <link href="${initParam.cssPath}default.css" type="text/css" rel="stylesheet"/>   
+        <link href="${initParam.generalImagesPath}favicon.ico" rel="shortcut icon" type="image/x-icon" >
+
+        
+        <link href="${initParam.cssPath}base.css" type="text/css" rel="stylesheet"/>
+        <link href="${initParam.cssPath}layout.css" type="text/css" rel="stylesheet"/>
+
+        <%-- <link rel="stylesheet" media="screen and (min-device-width: 800px)" href="800.css" /> --%>
+        
+    </head>
+    <body>
+        <div class="container">
+            
+            <div class="one-half column">
+                <a href="index.jsp">
+                    <img src="${initParam.generalImagesPath}renew_logo.png"/>
+                </a>
+            </div>
+                
+            <div class="one-half column">
+                <c:choose>
+                    <c:when test="${loggedSessionId == null}">
+                        <strong><label id="login_status" class="white ">You are not logged in</label></strong>
+                    </c:when> 
+                    <c:otherwise>
+                        <strong><label id="login_status" class="white ">Welcome ${userName} !!</label></strong>
+                    </c:otherwise>
+                </c:choose>  
+                        
+                <ul id="widget_navigation_list" class="shadow navigation_bar">                            
+                    <li>
+                        <c:choose>
+                            <c:when test="${loggedSessionId == null}">
+                                <a href="login.jsp" target="_top">
+                                    <span id="login_widget"><fmt:message key="toolbar.login.login"/></span>
+                                </a>
+                            </c:when> 
+                            <c:otherwise>
+                                <form action="user" method="post">
+                                    <input type="hidden" id="cmd" name="cmd" value="logout" />
+                                    <input type="submit" value="<fmt:message key="toolbar.login.logout"/>" />
+                                </form>                                         
+                            </c:otherwise>
+                        </c:choose>
+                    </li>
+                    <c:choose>
+                        <c:when test="${loggedSessionId != null}">
+                            <li>
+                                <%-- if this cmd is changed, make sure that it is alos changed in the main servlet for authorisation --%>
+                                <a href="user?cmd=searchKey&key=${userid}" target="_top">
+                                    <span id="login_widget"><fmt:message key="toolbar.login.manage"/></span>
+                                </a>  
+                            </li>
+                        </c:when> 
+                    </c:choose>             
+                    <c:choose>
+                        <c:when test="${loggedSessionId != null}">
+                            <li>
+                                <a href="user?cmd=getcustomerorders&key=${userid}" target="_top">
+                                    <span id="login_widget"><fmt:message key="toolbar.login.orders"/></span>
+                                </a>  
+                            </li>
+                        </c:when> 
+                    </c:choose> 
+                    <c:choose>
+                        <c:when test="${userType == 1}">
+                            <li>
+                                <a href="../admin/category?cmd=searchall" target="_top">
+                                    <span id="shopping_cart_widget"><fmt:message key="toolbar.login.admin"/></span>
+                                </a>
+                            </li>
+                        </c:when> 
+                    </c:choose>                                
+
+                </ul>                        
+            </div>
+                
+            <div id="main_navigation" class="floatright">
+                <ul id="main_navigation_list" class="radius shadow navigation_bar">
+                    <li class="" id="main_navigation_home">
+                        <a target="_top" href="index.jsp" class="" id="main_navigation_home_link">
+                            <span class="" id="main_navigation_home_title"><fmt:message key="toolbar.main.home"/></span>
+                        </a>
+                    </li>
+                    <li class="" id="main_navigation_products">
+                        <a target="_top" href="${initParam.categoriesPage}" class="" id="main_navigation_products_link">
+                            <span class="" id="main_navigation_products_title"><fmt:message key="toolbar.main.products"/></span>
+                        </a>
+                    </li>
+                    <li class="" id="main_navigation_services">
+                        <a target="_top" href="${initParam.servicesPage}&key=14" class="" id="main_navigation_services_link">
+                            <span class="" id="main_navigation_services_title"><fmt:message key="toolbar.main.services"/></span>
+                        </a>
+                    </li>
+                    <li class="" id="main_navigation_events">
+                        <a target="_top" href="${initParam.eventPage}" class="" id="main_navigation_events_link">
+                            <span class="" id="main_navigation_events_title"><fmt:message key="toolbar.main.events"/></span>
+                        </a>
+                    </li>
+                    <li class="" id="main_navigation_information">
+                        <a target="_top" href="${initParam.informationPage}" class="" id="main_navigation_information_link">
+                            <span class="" id="main_navigation_information_title"><fmt:message key="toolbar.main.information"/></span>
+                        </a>
+                    </li>
+                    <li class="" id="main_navigation_gallery">
+                        <a target="_top" href="${initParam.galleryPage}" class="" id="main_navigation_gallery_link">
+                            <span class="" id="main_navigation_gallery_title"><fmt:message key="toolbar.main.gallery"/></span>
+                        </a>
+                    </li>
+                    <li class="" id="main_navigation_aboutus">
+                        <a target="_top" href="aboutus.jsp" class="" id="main_navigation_aboutus_link">
+                            <span class="" id="main_navigation_aboutus_title"><fmt:message key="toolbar.main.aboutus"/></span>
+                        </a>
+                    </li>
+                    <li class="" id="main_navigation_contactus">
+                        <a target="_top" href="${initParam.contactusPage}" class="" id="main_navigation_contactus_link">
+                            <span class="" id="main_navigation_contactus_title"><fmt:message key="toolbar.main.contactus"/></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>                
+                 
+            <div class="clearright"/>
+ 
+            <div id="main_content_wrapper">                        

@@ -1,0 +1,67 @@
+{"events":
+	[
+            {	"year"      :	"2013",
+                "month"     :	"12",
+                "date"      :	"4",
+                "dayevents" :	[
+                                    {	"title"	: 	"Energy Players Networking Event (Dundalk)",
+                                        "href"	:	"http://www.seai.ie/News_Events/Events/Other_Energy_Events/Energy-Players-Networking-Event.html"
+                                    }
+                                ]
+            },
+            {	"year"      :	"2013",
+                "month"     :	"12",
+                "date"      :	"10",
+                "dayevents" :	[
+                                    {	"title"	: 	"EU Horizon Energy Challenge (Dublin)",
+                                        "href"	:	"http://www.seai.ie/News_Events/Events/SEAI_Events/EU-Horizon-2020-Energy-Societal-Challenge-Information-Event.html"
+                                    }
+                                ]
+            },
+            {	"year"      :	"2014",
+                "month"     :	"1",
+                "date"      :	"20",
+                "dayevents" :	[
+                                    {	"title"	: 	"World Future Energy Summit (Abu Dhabi)",
+                                        "href"	:	"http://www.seai.ie/News_Events/Events/Other_Energy_Events/World-Future-Energy-Summit-WFES-2014.html"
+                                    }
+                                ]
+            },
+            {	"year"      :	"2014",
+                "month"     :	"1",
+                "date"      :	"21",
+                "dayevents" :	[
+                                    {	"title"	: 	"World Future Energy Summit (Abu Dhabi)",
+                                        "href"	:	"http://www.seai.ie/News_Events/Events/Other_Energy_Events/World-Future-Energy-Summit-WFES-2014.html"
+                                    }
+                                ]
+            },
+            {	"year"      :	"2014",
+                "month"     :	"1",
+                "date"      :	"22",
+                "dayevents" :	[
+                                    {	"title"	: 	"World Future Energy Summit (Abu Dhabi)",
+                                        "href"	:	"http://www.seai.ie/News_Events/Events/Other_Energy_Events/World-Future-Energy-Summit-WFES-2014.html"
+                                    }
+                                ]
+            },
+            {	"year"      :	"2014",
+                "month"     :	"1",
+                "date"      :	"29",
+                "dayevents" :	[
+                                    {	"title"	: 	"National Power Electricity Summit (Dublin)",
+                                        "href"	:	"http://www.seai.ie/News_Events/Events/Other_Energy_Events/National-Power-Electricity-Summit-2014.html"
+                                    }
+                                ]
+            },
+            {	"year"      :	"2014",
+                "month"     :	"2",
+                "date"      :	"18",
+                "dayevents" :	[
+                                    {	"title"	: 	"Solar Thermal Materials Conference (Berlin)",
+                                        "href"	:	"http://www.seai.ie/News_Events/Events/Other_Energy_Events/SMEThermal_2014.html"
+                                    }
+                                ]
+            }            
+	]
+}

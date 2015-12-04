@@ -1,0 +1,13 @@
+    <div id="sidebar_menu_contact_us" class="shadow content_container content_container_w200 margin_right ">
+        <div class="sidebar_header">
+            <span id="product_span">
+                Contact Us
+            </span>
+        </div>                
+        <a href="${initParam.contactusPage}" id="contactus_link" style="margin-top:20px;">
+            <img id="contact_us_image" src="${initParam.generalImagesPath}Contact_us.png" class="radius" alt="Contact Us">	
+            <span class="italic">Contact Us Now !</span>
+            <span class="italic">To arrange for a</span>
+            <span class="italic">home demonstration.</span>
+        </a>						
+    </div>  

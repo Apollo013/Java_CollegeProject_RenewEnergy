@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+         xmlns="http://java.sun.com/xml/ns/javaee" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <error-page>
+        <exception-type>java.lang.Exception</exception-type>
+        <location>/views/messages/exceptions.jsp</location>
+    </error-page>    
+    <jsp-config>
+    </jsp-config>     
+    <context-param>
+        <description>Relative path to Error Message Page</description>
+        <param-name>errorPath</param-name>
+        <param-value>../messages/error.jsp</param-value>
+    </context-param>   
+    <context-param>
+        <description>Error Title Session Name</description>
+        <param-name>errorTitle</param-name>
+        <param-value>errorTitle</param-value>
+    </context-param>     
+    <context-param>
+        <description>Error Message Session Name</description>
+        <param-name>errorMessage</param-name>
+        <param-value>errorMessage</param-value>
+    </context-param>       
+    <context-param>
+        <description>Relative path to Confirmation Page</description>
+        <param-name>confirmationPath</param-name>
+        <param-value>../messages/confirmation.jsp</param-value>
+    </context-param>  
+    <context-param>
+        <description>Relative path to services images</description>
+        <param-name>serviceImagesPath</param-name>
+        <param-value>../../images/services/</param-value>
+    </context-param> 
+    <context-param>
+        <description>Relative path to product and category images</description>
+        <param-name>productImagesPath</param-name>
+        <param-value>../../images/products/</param-value>
+    </context-param>                       
+    <context-param>
+        <description>Relative path to general images</description>
+        <param-name>generalImagesPath</param-name>
+        <param-value>../../images/general/</param-value>
+    </context-param>    
+    <context-param>
+        <description>Relative path to gallery images</description>
+        <param-name>galleryImagesPath</param-name>
+        <param-value>../../images/gallery/</param-value>
+    </context-param>     
+    <context-param>
+        <description>Relative path to media</description>
+        <param-name>mediaPath</param-name>
+        <param-value>../../media/</param-value>
+    </context-param>
+    <context-param>
+        <description>Relative Path to javascript files</description>
+        <param-name>jsPath</param-name>
+        <param-value>../../js/</param-value>
+    </context-param>
+    <context-param>
+        <description>Relative Path To css files</description>
+        <param-name>cssPath</param-name>
+        <param-value>../../css/</param-value>
+    </context-param>
+    <context-param>
+        <description>Relative Path To Lytebox files</description>
+        <param-name>lyteboxPath</param-name>
+        <param-value>../../lytebox/</param-value>
+    </context-param>    
+    <context-param>
+        <description>Relative path to main pages</description>
+        <param-name>sharedPages</param-name>
+        <param-value>views/main/</param-value>
+    </context-param>
+    <context-param>
+        <description>Relative Path to admin pages</description>
+        <param-name>adminPages</param-name>
+        <param-value>views/admin/</param-value>
+    </context-param>
+    <context-param>
+        <description>Relative path to Events Page</description>
+        <param-name>eventPage</param-name>
+        <param-value>events.jsp</param-value>
+    </context-param>
+    <context-param>
+        <description>Relative path to Gallery Page</description>
+        <param-name>galleryPage</param-name>
+        <param-value>gallery.jsp</param-value>
+    </context-param>
+    <context-param>
+        <description>Relative path to Contact us Page</description>
+        <param-name>contactusPage</param-name>
+        <param-value>contactus.jsp</param-value>
+    </context-param>
+    <context-param>
+        <description>Relative path to Information Page</description>
+        <param-name>informationPage</param-name>
+        <param-value>information.jsp</param-value>
+    </context-param>
+    <context-param>
+        <description>Relative path to Categories Page</description>
+        <param-name>categoriesPage</param-name>
+        <param-value>category?cmd=searchall</param-value>
+    </context-param>
+    <context-param>
+        <description>Relative path to Category Page</description>
+        <param-name>categoryPage</param-name>
+        <param-value>category?cmd=searchkey</param-value>
+    </context-param>
+    <context-param>
+        <description>Relative path to Product Page</description>
+        <param-name>productPage</param-name>
+        <param-value>product?cmd=searchkey</param-value>
+    </context-param>
+    <context-param>
+        <description>Relative path to Services Page</description>
+        <param-name>servicesPage</param-name>
+        <param-value>service?cmd=searchkey</param-value>
+    </context-param>   
+    <context-param>
+        <description>Create Command</description>
+        <param-name>createCommand</param-name>
+        <param-value>createnew</param-value>
+    </context-param> 
+    <context-param>
+        <description>Edit Command</description>
+        <param-name>editCommand</param-name>
+        <param-value>edit</param-value>
+    </context-param>           
+    <context-param>
+        <description>Insert Command</description>
+        <param-name>insertCommand</param-name>
+        <param-value>insert</param-value>
+    </context-param>   
+    <context-param>
+        <description>Update Command</description>
+        <param-name>updateCommand</param-name>
+        <param-value>update</param-value>
+    </context-param> 
+    <context-param>
+        <description>Delete Command</description>
+        <param-name>deleteCommand</param-name>
+        <param-value>delete</param-value>
+    </context-param>
+    <context-param>
+        <description>Confirm Delete Command</description>
+        <param-name>confirmdeleteCommand</param-name>
+        <param-value>confirmdelete</param-value>
+    </context-param>      
+    <context-param>
+        <description>Search All Command</description>
+        <param-name>searchAllCommand</param-name>
+        <param-value>searchall</param-value>
+    </context-param>   
+    <context-param>
+        <description>Search Key Command</description>
+        <param-name>searchKeyCommand</param-name>
+        <param-value>searchkey</param-value>
+    </context-param>
+    <context-param>
+        <description>Process Order Command</description>
+        <param-name>processOrderCommand</param-name>
+        <param-value>processorder</param-value>
+    </context-param>                                
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>views/main/index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>

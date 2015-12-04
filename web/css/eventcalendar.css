@@ -1,0 +1,34 @@
+#calendar_wrapper{width:100%;}
+
+/*==============================================================*/
+/* CALENDAR HEADER						*/
+/*==============================================================*/
+#calendar_header_wrapper{margin-top:10px; margin-left:auto; margin-right:auto; width:300px; height:60px;}
+.header_item{float:left; text-align:center; margin-top:15px; font-size:18px; font-weight:bold; color:#31448b;}
+#monthDisplay{width:120px;}
+#yearDisplay{width:95px;}
+/*==============================================================*/
+/* BUTTONS 							*/
+/*==============================================================*/
+div.browse {background:url('../images/general/hori_large.png') no-repeat; display:block; width:30px; height:30px; float:left; margin:10px 10px; cursor:pointer; font-size:1px;}
+div.right { background-position: 0 -30px; margin-right: 0px;}
+div.right:hover { background-position:-30px -30px; }
+div.right:active { background-position:-60px -30px; }
+div.left { margin-left: 0px; }
+div.left:hover  { background-position:-30px 0; }
+div.left:active { background-position:-60px 0; }
+/*==============================================================*/
+/* CALENDAR							*/
+/*==============================================================*/
+/*#days_header_wrapper{width:100%; height:20px; color:#31448b;}*/
+#calendar_table {width:100%; }
+.calendar_week{padding:0px;}
+.calendar_week_day_header{width: 14%; height:15px; padding:5px; margin:0px; font-weight:bold;}
+.calendar_week_day_title{display:block; text-align:center; font-weight:bold;}
+.calendar_day{width: 14%; height:90px; padding:0px; margin:0px; font-weight:bold;}
+.calendar_weekend{background-color:#5284da;}
+.calendar_day span{width:96.5%; background-color:#31448b; text-align:right; display:inline-block; margin-top:0px; padding-right:5px; color:#fff; line-height:20px;}
+.calendar_day span.out_of_range{background-color:#808080; color:#fff;}
+.calendar_day div{width:100%; height:75px; display:inline-block;  overflow:auto; }
+.has_events{background-color:#fe971f;}
+.day_event{display:block; margin:5px; color:#36b;}

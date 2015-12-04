@@ -1,0 +1,108 @@
+<%@page import="Models.Concrete.Category"%>
+<%@page import="java.util.List"%>
+<%@page import="DataAccess.Abstract.ICategoryDao"%>
+<%@page import="DataAccess.Concrete.CategoryDao"%>       
+<%@page import="Exceptions.DaoException"%>
+
+     
+<div id="main_sidebar" class="floatleft content_container_w200 margin_right ">
+    
+    <div id="sidebar" class="floatleft shadow content_container content_container_w200 margin_right ">
+
+        <div class="sidebar_header">
+            <span id="product_span">
+                Solutions
+            </span>
+        </div>
+
+        <div class="sidebar_menu">                
+            <ul id="sidebar_menu_list">
+                <c:choose>
+                    <c:when test="${categorySidebarList != null}">
+                        <c:forEach var="category" items="${categorySidebarList}" >
+                            <li>
+                                <p>
+                                    <a href="${initParam.categoryPage}&key=${category.id}">
+                                        <span>
+                                            ${category.name}
+                                        </span>
+                                    </a>
+                                </p>
+                            </li>
+                            <c:forEach var="product" items="${category.products}">
+                                <li>
+                                    <a href="${initParam.productPage}&key=${product.id}">
+                                        <span>
+                                            ${product.name}
+                                        </span>
+                                    </a>
+                                </li>
+                            </c:forEach>
+                        </c:forEach>                   
+                    </c:when>
+                    <c:otherwise>
+
+                        <c:set var="errorMessage" value="ERROR: Categories data is not available." scope="request"/>
+                        <c:redirect url="../messages/error.jsp" context="request"/>
+                        
+                    </c:otherwise>
+                </c:choose>
+            </ul>
+        </div>
+    </div>
+               
+   <c:choose>
+        <c:when test="${searchKeyItem != null}">
+            <div id="sidebar" class="shadow content_container content_container_w200 margin_right ">
+                
+                <div class="sidebar_header">
+                    <span id="downloads_span">
+                        Downloads
+                    </span>
+                </div>  
+   
+                <div>
+                    <a  href="${searchKeyItem.getFaqsPdfFullPath()}">
+                        <img src="${initParam.generalImagesPath}pdf.jpg" alt="FAQs" class="info_image"/>
+                        <span class="info_text">Download Frequently Asked Questions</span>
+                    </a>
+                </div> 
+                        
+                <div>
+                    <a  href="${searchKeyItem.getBrochurePdfFullPath()}">
+                        <img src="${initParam.generalImagesPath}pdf.jpg" alt="brochure" class="info_image"/>
+                        <span class="info_text">Download Our Brochure</span>
+                    </a>					
+                </div>
+                       
+            </div>
+        </c:when> 
+        <c:otherwise>
+            <div id="sidebar" class="shadow content_container content_container_w200 margin_right ">
+                <div class="sidebar_header">
+                    <span id="downloads_span">
+                        Downloads
+                    </span>
+                </div>  
+                <div>
+                    <a  href="${initParam.mediaPath}seai_guide.pdf">
+                        <img src="${initParam.generalImagesPath}pdf.jpg" alt="brochure" class="info_image"/>
+                        <span class="info_text">SEI Guide To Renewable Energy In The Home</span>
+                    </a>					
+                </div>
+                <div>
+                    <a  href="${initParam.mediaPath}DEAP_Manual.pdf">
+                        <img src="${initParam.generalImagesPath}pdf.jpg" alt="brochure" class="info_image"/>
+                        <span class="info_text">Energy Assessment Procedure Guide</span>
+                    </a>					
+                </div>    
+                <div>&nbsp;</div>
+            </div>
+        </c:otherwise>        
+    </c:choose>
+                         
+    
+    <%@include file="contactus_sidepanel.jspf"%>             
+           
+</div>
+
